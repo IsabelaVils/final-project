@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+.detail-wrapper {
+    margin: 5% 20% 3% 20%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    background-color: #555;
+    border: double white 1em;
+    
+}
+
+.info {
+    margin: 2em 3em 3em 0em;
+    justify-self: center;
+    padding: 0.5em;
+    
+}
+
+.image {   
+    margin: 2em 0em 3em 3em;
+    justify-self: center;
+    
+}
+
+h3 {
+    color: white;
+}
+
+.text-detalii { 
+    line-height: 1.8em;
+    color:white;
+    font-size: 0.8em;
+    text-align: left;
+    letter-spacing: 0.08em;
+}
+.bold {
+    font-weight: bold;
+    color: white;
+}
