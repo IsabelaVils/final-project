@@ -50,18 +50,8 @@ export default function DeleteRest() {
     return (
         <div>
         <form onSubmit={ handleSubmit } className="wrapper">
-            <h1> Delete {restaurant.name} </h1>  
-                <div className="icon">
-                    <label htmlFor="Name">Name</label>
-                    <input 
-                    onChange= { handleInputChange } 
-                    value ={ restaurant.name } 
-                    type="text" 
-                    className = { 'form-control'  }
-                    id="Name"  
-                    placeholder="Edit name"
-                    />
-                </div>
+            <h1> Delete  </h1>  
+                
                 <div className="icon">
                     <label htmlFor="address">Address</label>
                     <input 

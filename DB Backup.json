@@ -1,0 +1,163 @@
+{
+    "restaurants": [
+      {
+        "id": 11111111,
+        "name": "Acasă la Dracula",
+        "address": "Strada Poiana lui Stechil 22, Poiana Brașov",
+        "telephone": "0372689800 0749689800",
+        "program": "L-D: 10:00-23:00",
+        "specific": "International and Romanian",
+        "website": "https://house-of-dracula.com/",
+        "poster2": "./images/international3-01.jpg",
+        "poster": "https://www.zilesinopti.ro/media/84489245155648222ead340.92330429.jpg/resize?w=250"
+      },
+      {
+        "id": 2,
+        "name": "Blink Pizz",
+        "address": "Strada Ceferiștilor 69",
+        "telephone": "0368 408 050 0720 797 301",
+        "program": "L-D: 10:00-23:00",
+        "specific": "Pizza",
+        "website": "https://blinkpizza.ro/",
+        "poster": "https://www.zilesinopti.ro/media/794b67b9eda8767f500b1db0c3570680.jpg/resize?w=250"
+      },
+      {
+        "id": 3,
+        "name": "Ambient",
+        "address": "Strada Ceferiștilor 69",
+        "telephone": "0368 408 050 0720 797 301",
+        "program": "L-D: 10:00-23:00",
+        "specific": "International",
+        "website": "https://www.hotelambient.ro/en/",
+        "poster": "https://www.zilesinopti.ro/media/cbecfdd9fd1ba2d9b72708c46ec9812f.jpg/resize?w=250"
+      },
+      {
+        "id": 4,
+        "name": "Ando's",
+        "address": "Bulevard 15 Noiembrie 6",
+        "telephone": "0268410588",
+        "program": "L-D: 10:00-23:00",
+        "specific": "Fast-Food",
+        "website": "http://www.andosfood.ro/",
+        "poster": "https://www.zilesinopti.ro/media/63caf193077493f49afb849c3ab23dd8.jpg/resize?w=250"
+      },
+      {
+        "id": 5,
+        "name": "Blu Viking",
+        "address": "Str. Iuliu Maniu 38",
+        "telephone": "0268418989 0268418996",
+        "program": "L-D: 00:00-23:59",
+        "specific": "Pizza",
+        "website": "http://www.blueviking.ro/pizza/",
+        "poster2": "./images/pizza01-01.jpg",
+        "poster": "https://www.zilesinopti.ro/media/b7bc8cc9c078f1165bd65248ebc320c5.jpg/resize?w=250"
+      },
+      {
+        "id": 6,
+        "name": "Burzza Delivery",
+        "address": "Prahova numărul 12",
+        "telephone": "0740287992",
+        "program": "L-V: 11:00-22:00 S-D: 15:00-22:00",
+        "specific": "Pizza",
+        "website": "http://burzza.ro/",
+        "poster": "https://www.zilesinopti.ro/media/e9a784884e21de298fd5c9efb90f0bb2.jpg/resize?w=250"
+      },
+      {
+        "id": 7,
+        "name": "Caffino",
+        "address": "Bulevardul Griviței 40",
+        "telephone": "0268425680 0268979",
+        "program": "L-D: 09:00-23:30",
+        "specific": "International",
+        "website": "https://www.facebook.com/caffinobrasov",
+        "poster": "https://www.zilesinopti.ro/media/a935c6b24d5498da38cb670de2e8717e.jpg/resize?w=250"
+      },
+      {
+        "id": 8,
+        "name": "Casa Bistriteana",
+        "address": "Strada Avram Iancu 24",
+        "telephone": "0268470966",
+        "program": "L-D: 10:00-22:00",
+        "specific": "International, Meniul Zilei",
+        "website": "http://www.lacasabistriteana.ro/",
+        "poster": "https://www.zilesinopti.ro/media/23ffd75fcd4668a08180ff4f0dd94bca.jpg/resize?w=250"
+      },
+      {
+        "id": 9,
+        "name": "Ceasu' Rau",
+        "address": "Strada Iuliu Maniu 56",
+        "telephone": "0268476670 0723297993",
+        "program": "L-D: 10:00-24:00",
+        "specific": "Romanian",
+        "website": "https://www.sergianagrup.ro/",
+        "poster": " https://www.zilesinopti.ro/media/7a51df285ceaec5aca262b0bf2f54144.jpg/resize?w=250"
+      },
+      {
+        "id": 10,
+        "name": "City Food & Catering",
+        "address": "Strada Jupiter 10",
+        "telephone": "0268330611 0728424841",
+        "program": "L-S: 11:00-22:00 D: 11:00-20:00",
+        "specific": "Romanian",
+        "website": "http://www.cityfood.ro/",
+        "poster": "https://www.zilesinopti.ro/media/334d9fa8d41bf0d329ab4f3034263cd0.jpg/resize?w=250"
+      },
+      {
+        "id": 11,
+        "name": "Dodo Pizza",
+        "address": "Bulevardul Gării 1",
+        "telephone": "*3636",
+        "program": "L-D: 08:30-23:00",
+        "specific": "Pizza",
+        "website": "https://dodopizza.ro/",
+        "poster": "https://www.zilesinopti.ro/media/bb1a9bd96d89e6a24373df941fae2674.jpg/resize?w=250"
+      }
+    ],
+    "users": [
+      {
+        "username": "isabela",
+        "password": "tudor",
+        "retype-password": "tudor",
+        "id": 13
+      },
+      {
+        "username": "rrkkk",
+        "password": "k",
+        "retype-password": "k",
+        "id": 14
+      },
+      {
+        "username": "rrrr",
+        "password": "r",
+        "retype-password": "r",
+        "id": 15
+      }
+    ],
+    "reviews": [
+      {
+        "id": 1,
+        "description": " bla bla bla",
+        "restaurantId": 11111111
+      },
+      {
+        "id": 2,
+        "description": " Iar bla bla bla",
+        "restaurantId": 11111111
+      },
+      {
+        "id": 3,
+        "description": " Din nou bla bla bla",
+        "restaurantId": 11111111
+      },
+      {
+        "id": 3,
+        "description": " Din nou bla bla bla",
+        "restaurantId": 2
+      },
+      {
+        "id": 3,
+        "description": " Bla bla bla",
+        "restaurantId": 2
+      }
+    ]
+  }

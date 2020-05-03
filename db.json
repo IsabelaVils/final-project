@@ -1,7 +1,7 @@
 {
   "restaurants": [
     {
-      "id": 1,
+      "id": 11111111,
       "name": "Acasă la Dracula",
       "address": "Strada Poiana lui Stechil 22, Poiana Brașov",
       "telephone": "0372689800 0749689800",
@@ -9,7 +9,8 @@
       "specific": "International and Romanian",
       "website": "https://house-of-dracula.com/",
       "poster2": "./images/international3-01.jpg",
-      "poster": "https://www.zilesinopti.ro/media/84489245155648222ead340.92330429.jpg/resize?w=250"
+      "poster": "https://www.zilesinopti.ro/media/84489245155648222ead340.92330429.jpg/resize?w=250",
+      "offer": "Bla bla"
     },
     {
       "id": 2,
@@ -19,7 +20,8 @@
       "program": "L-D: 10:00-23:00",
       "specific": "Pizza",
       "website": "https://blinkpizza.ro/",
-      "poster": "https://www.zilesinopti.ro/media/794b67b9eda8767f500b1db0c3570680.jpg/resize?w=250"
+      "poster": "https://www.zilesinopti.ro/media/794b67b9eda8767f500b1db0c3570680.jpg/resize?w=250",
+      "offer": " 2 Bla bla"
     },
     {
       "id": 3,
@@ -121,52 +123,43 @@
       "id": 13
     },
     {
-      "username": "ert",
-      "password": "111",
-      "retype-password": "111",
+      "username": "rrkkk",
+      "password": "k",
+      "retype-password": "k",
       "id": 14
     },
     {
-      "username": "rr",
-      "password": "1",
-      "retype-password": "1",
+      "username": "rrrr",
+      "password": "r",
+      "retype-password": "r",
       "id": 15
-    },
-    {
-      "username": "rr",
-      "password": "1",
-      "id": 16
-    },
-    {
-      "username": "1",
-      "password": "1",
-      "retype-password": "1",
-      "id": 17
-    },
-    {
-      "username": "e",
-      "password": "e",
-      "retype-password": "e",
-      "id": 18
-    },
-    {
-      "username": "rr1",
-      "password": "1",
-      "retype-password": "1",
-      "id": 19
-    },
-    {
-      "username": "rr3",
-      "password": "3",
-      "retype-password": "3",
-      "id": 20
     }
   ],
-  "reviews" :[
+  "reviews": [
     {
       "id": 1,
-      "description":" bla bla bla"
-    
+      "description": " bla bla bla",
+      "restaurantId": 11111111
+    },
+    {
+      "id": 2,
+      "description": " Iar bla bla bla",
+      "restaurantId": 11111111
+    },
+    {
+      "id": 3,
+      "description": " Din nou bla bla bla",
+      "restaurantId": 11111111
+    },
+    {
+      "id": 3,
+      "description": " Din nou bla bla bla",
+      "restaurantId": 2
+    },
+    {
+      "id": 3,
+      "description": " Bla bla bla",
+      "restaurantId": 2
     }
   ]
 }
