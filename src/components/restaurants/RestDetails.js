@@ -41,43 +41,56 @@ function RestDetails() {
                 </div>
                 <div className= "info"> 
                     <h3> {restaurant.name} </h3>
-                    <p className="text-detalii"> <p className= "bold">Specific: </p>{restaurant.specific} 
+                    <p className="text-detalii"> <span className= "bold">Specific: </span>{restaurant.specific} 
                     <br/>
-                    <p className= "bold">Adresa: </p>{restaurant.address} 
-                     <br/>
-                     <span className= "bold">Telefon: </span>{restaurant.telephone} 
-                     <br/>
-                     <span className= "bold">Program: </span>{restaurant.program} 
-                    <br/>
-                    <span className= "bold">Website:</span> {restaurant.website} 
-                    <br/>
-                    <span className= "bold">Reviews:</span>  
-                    <br/>
+                    <p className= "bold">Adresa: {restaurant.address} </p>
+                        
+                            <span className= "bold">Telefon: </span>{restaurant.telephone} 
+                        <br/>
+                        <span className= "bold">Program: </span>{restaurant.program} 
+                        <br/>
+                            <span className= "bold">Website:</span> {restaurant.website} 
+                        <br/>
+                            <span className= "bold">Special offer:</span> {restaurant.offer}
+                        <br/>
+                            <span className= "bold">Reviews:</span>  
+                        <br/>
                     </p>
                      <div> 
                          { reviews.map(review => <p>{ review.description} </p> )}
                     
                      </div>  
-                    {   user ?
-                           < Link to= { "/restaurants/edit/" + restaurant.id } > Edit  </Link>
-                        : 
-                            null
-                    }
-                   <br/>
-                    {   user ?
-                           < Link to= { "/restaurants/add/" + restaurant.id } > Add  </Link>
-                        : 
-                            null
-                    }
-                    {   user ?
-                           < Link to= { "/restaurants/delete/" + restaurant.id } > Delete  </Link>
-                        : 
-                            null
-                    }
-                    
-                     <br/>
-                    
+                     <p>
+                            {   user ?
+                                < Link to= { "/reviews/add/" + reviews.id }className="btn" > Add Review </Link>
+                                : 
+                                 null
+                            }
+                        </p>
+                     <div className="box">
+                         <p>
+                            {   user ?
+                                < Link to= { "/restaurants/edit/" + restaurant.id } className="btn" > Edit  </Link>
+                                : 
+                                null
+                            }
+                        </p>
+                        <p>
+                            {   user ?
+                                < Link to= { "/restaurants/add/" + restaurant.id }className="btn" > Add  </Link>
+                                : 
+                                 null
+                            }
+                        </p>
+                        <p>
+                            {   user ?
+                                < Link to= { "/restaurants/delete/" + restaurant.id }  className="btn"> Delete  </Link>
+                                : 
+                                 null
+                            }
+                            </p>
                         </div>
+                    </div>
             </div>
         );
     } else {
@@ -86,4 +99,5 @@ function RestDetails() {
 }
 
 export default RestDetails;
+
 

@@ -5,6 +5,7 @@ import RestList from './restaurants/RestList';
 import EditRest from './restaurants/EditRest';
 import DeleteRest from './restaurants/DeleteRest';
 import AddRest from './restaurants/AddRest';
+import AddReview from './restaurants/AddReview';
 import Header from './shared/Header';
 import RestDetails from './restaurants/RestDetails';
 import Register from './auth/Register';
@@ -42,8 +43,8 @@ function App() {
             <PrivateRoute path = "/restaurants/add/:restaurantId">
                 <AddRest/>
             </PrivateRoute>
-            <PrivateRoute path = "/restaurants/add/:restaurantId">
-                <AddRest/>
+            <PrivateRoute path = "/reviews/add/:reviewId">
+                <AddReview/>
             </PrivateRoute>
             <Route path = "/register">
                 <Register/>

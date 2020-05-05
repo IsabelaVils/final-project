@@ -1,3 +1,4 @@
+
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import qs from 'qs';
@@ -115,7 +116,7 @@ function Register () {
                   < h1> Register</h1>
 
                         { (globalErrorMessage ?
-                            <div>
+                            <div status= "error">
                                 User already exists!
                             </div>
                             :
@@ -124,7 +125,7 @@ function Register () {
                         }
             
                         { ( isSuccesfull ? 
-                            <div> 
+                            <div status ="succes" > 
                                 Your user was created!
                             </div>
                             : null )}
@@ -142,7 +143,7 @@ function Register () {
                        placeholder="Enter username"
                     />
                     <i className="fa fa-user" aria-hidden="true"/>
-                    <div className ="invalid-feedback">
+                    <div className ="invalid-feedback" status= "error">
                        { formError.username }
                     </div>
                  </div>
@@ -160,7 +161,7 @@ function Register () {
                        placeholder="Enter password"
                     />
                     <i className="fa fa-unlock-alt" aria-hidden="true"/>
-                    <div className ="invalid-feedback">
+                    <div className ="invalid-feedback" status= "error">
                      { formError.password }
                     </div>
                  </div>
@@ -168,7 +169,7 @@ function Register () {
               <br/>
               
               
-                 <label htmlFor="retype-password" >Retype Password</label>
+                 <label htmlFor="retype-password"  id="succes">Retype Password</label>
                  <div className="icon">
                     <input 
                        onChange= { handleInputChange } 
@@ -179,7 +180,7 @@ function Register () {
                        placeholder="Retype password" 
                     />
                   <i className="fa fa-unlock-alt" aria-hidden="true"/>
-                  <div className ="invalid-feedback">
+                  <div className ="invalid-feedback" status= "error">
                      { formError['retype-password'] }
                      { formError['retype-password']  ? <br/> : ''}
                      { formError['different-passwords']}

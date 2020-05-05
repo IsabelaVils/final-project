@@ -10,11 +10,11 @@
       "website": "https://house-of-dracula.com/",
       "poster2": "./images/international3-01.jpg",
       "poster": "https://www.zilesinopti.ro/media/84489245155648222ead340.92330429.jpg/resize?w=250",
-      "offer": "Bla bla"
+      "offer": "oferta zilei"
     },
     {
       "id": 2,
-      "name": "Blink Pizz",
+      "name": "Blink Pizza 2",
       "address": "Strada Ceferiștilor 69",
       "telephone": "0368 408 050 0720 797 301",
       "program": "L-D: 10:00-23:00",
@@ -25,23 +25,13 @@
     },
     {
       "id": 3,
-      "name": "Ambient",
+      "name": "Ambient 2",
       "address": "Strada Ceferiștilor 69",
       "telephone": "0368 408 050 0720 797 301",
       "program": "L-D: 10:00-23:00",
       "specific": "International",
       "website": "https://www.hotelambient.ro/en/",
       "poster": "https://www.zilesinopti.ro/media/cbecfdd9fd1ba2d9b72708c46ec9812f.jpg/resize?w=250"
-    },
-    {
-      "id": 4,
-      "name": "Ando's",
-      "address": "Bulevard 15 Noiembrie 6",
-      "telephone": "0268410588",
-      "program": "L-D: 10:00-23:00",
-      "specific": "Fast-Food",
-      "website": "http://www.andosfood.ro/",
-      "poster": "https://www.zilesinopti.ro/media/63caf193077493f49afb849c3ab23dd8.jpg/resize?w=250"
     },
     {
       "id": 5,
@@ -113,6 +103,197 @@
       "specific": "Pizza",
       "website": "https://dodopizza.ro/",
       "poster": "https://www.zilesinopti.ro/media/bb1a9bd96d89e6a24373df941fae2674.jpg/resize?w=250"
+    },
+    {
+      "id": 45,
+      "name": "Nou"
+    },
+    {
+      "name": "Test",
+      "address": "test",
+      "id": 11111112
+    },
+    {
+      "name": "Test",
+      "address": "test",
+      "id": 11111113
+    },
+    {
+      "name": "Test",
+      "address": "test",
+      "id": 11111114
+    },
+    {
+      "Name": "TEST",
+      "id": 11111115
+    },
+    {
+      "Name": "Local nou",
+      "id": 11111116
+    },
+    {
+      "Offer": "Meniul zilei",
+      "id": 11111117
+    },
+    {
+      "Offer": "Meniul zilei",
+      "id": 11111118
+    },
+    {
+      "offer": "333",
+      "telephone": "333",
+      "id": 11111119
+    },
+    {
+      "offer": "oferta",
+      "telephone": "",
+      "id": 11111120
+    },
+    {
+      "offer": "oferta",
+      "telephone": "",
+      "id": 11111121
+    },
+    {
+      "offer": "oferta",
+      "telephone": "",
+      "id": 11111122
+    },
+    {
+      "offer": "oferta",
+      "telephone": "333",
+      "id": 11111123
+    },
+    {
+      "offer": "oferta",
+      "telephone": "333",
+      "id": 11111124
+    },
+    {
+      "offer": "oferta",
+      "telephone": "333",
+      "id": 11111125
+    },
+    {
+      "offer": "oferta",
+      "telephone": "333",
+      "id": 11111126
+    },
+    {
+      "Name": "Resturant nou",
+      "Adress": "noua",
+      "telephone": "noua",
+      "id": 11111128
+    },
+    {
+      "name": "",
+      "address": "",
+      "telephone": "SSSSS",
+      "program": "",
+      "specific": "",
+      "Name": "S",
+      "Adress": "SSS",
+      "id": 11111129
+    },
+    {
+      "name": "",
+      "adress": "s",
+      "telephone": "s",
+      "program": "",
+      "username": "rr",
+      "id": 11111130
+    },
+    {
+      "name": "",
+      "adress": "rr",
+      "telephone": "rr",
+      "program": "",
+      "username": "rr",
+      "id": 11111131
+    },
+    {
+      "name": "",
+      "adress": "rr",
+      "telephone": "rr",
+      "program": "",
+      "username": "rr",
+      "id": 11111132
+    },
+    {
+      "name": "",
+      "adress": "rrr",
+      "telephone": "rrr",
+      "program": "",
+      "username": "r",
+      "id": 11111133
+    },
+    {
+      "name": "",
+      "adress": "rrrr",
+      "telephone": "rrr",
+      "program": "",
+      "username": "r",
+      "id": 11111134
+    },
+    {
+      "username": "eusuntiar",
+      "password": "ee",
+      "retype-password": "ee",
+      "id": 11111135
+    },
+    {
+      "name": "",
+      "adress": "111",
+      "telephone": "111",
+      "program": "",
+      "username": "1",
+      "id": 11111136
+    },
+    {
+      "name": "",
+      "adress": "ddd",
+      "telephone": "dd",
+      "program": "",
+      "username": "d",
+      "id": 11111137
+    },
+    {
+      "name": "",
+      "adress": "ALT",
+      "telephone": "ALT",
+      "program": "",
+      "username": "T",
+      "id": 11111138
+    },
+    {
+      "name": "",
+      "adress": "s",
+      "telephone": "111",
+      "program": "",
+      "username": "rr",
+      "id": 11111140
+    },
+    {
+      "name": "",
+      "adress": "ddd",
+      "telephone": "dd",
+      "program": "",
+      "id": 11111141
+    },
+    {
+      "name": "RESTA",
+      "adress": "NOU",
+      "telephone": "1",
+      "program": "1",
+      "specific": "1",
+      "id": 11111142
+    },
+    {
+      "name": "RESTAURANT",
+      "adress": "",
+      "telephone": "",
+      "program": "",
+      "id": 11111143
     }
   ],
   "users": [
@@ -133,6 +314,108 @@
       "password": "r",
       "retype-password": "r",
       "id": 15
+    },
+    {
+      "username": "rreee",
+      "password": "eee",
+      "retype-password": "eee",
+      "id": 16
+    },
+    {
+      "username": "rru",
+      "password": "u",
+      "retype-password": "u",
+      "id": 17
+    },
+    {
+      "username": "rrjhjh",
+      "password": "j",
+      "retype-password": "j",
+      "id": 18
+    },
+    {
+      "username": "rrrrr",
+      "password": "rr",
+      "retype-password": "rr",
+      "id": 19
+    },
+    {
+      "username": "eu",
+      "password": "1",
+      "retype-password": "1",
+      "id": 20
+    },
+    {
+      "username": "eu1",
+      "password": "1",
+      "retype-password": "1",
+      "id": 21
+    },
+    {
+      "username": "1",
+      "password": "1",
+      "retype-password": "1",
+      "id": 22
+    },
+    {
+      "username": "rr",
+      "password": "1",
+      "retype-password": "1",
+      "id": 23
+    },
+    {
+      "username": "r",
+      "password": "r",
+      "retype-password": "r",
+      "id": 24
+    },
+    {
+      "username": "user",
+      "password": "1",
+      "retype-password": "1",
+      "id": 25
+    },
+    {
+      "username": "erty",
+      "password": "y",
+      "retype-password": "y",
+      "id": 26
+    },
+    {
+      "username": "0",
+      "password": "0",
+      "retype-password": "0",
+      "id": 27
+    },
+    {
+      "username": "t",
+      "password": "t",
+      "retype-password": "t",
+      "id": 28
+    },
+    {
+      "username": "e",
+      "password": "e",
+      "retype-password": "e",
+      "id": 29
+    },
+    {
+      "username": "eeee",
+      "password": "e",
+      "retype-password": "e",
+      "id": 30
+    },
+    {
+      "username": "eee",
+      "password": "e",
+      "retype-password": "e",
+      "id": 31
+    },
+    {
+      "username": "s",
+      "password": "s",
+      "retype-password": "s",
+      "id": 32
     }
   ],
   "reviews": [

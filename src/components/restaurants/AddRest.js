@@ -1,115 +1,126 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
 import qs from 'qs';
-import AuthContext from '../auth/AuthContext';
 
-export default function AddRest() {
-    const { user } = useContext(AuthContext);
-    const { restaurantId } = useParams();
-    const [ restaurant, setRestaurant] = useState(null);
+//import './register.css';
+import '../Delivery.css';
+import  AuthContext from '../auth/AuthContext';
+
+
+
+function AddRest () {
+    const [ formData, setFormData] = useState({
+        'name' : '',
+        'adress' : '',
+        'telephone':'',
+        'program':''
+    });
+    const [isSuccesfull, setSuccesfull] = useState(false);
+    const [ restaurant, setRestaurant] = useState('');
+    const { user, setUser } = useContext(AuthContext);
     
-    async function getRestById (id) {
-        try {
-            const res = await axios('http://localhost:3002/restaurants/' + id)
-            setRestaurant(res.data);
-        } catch(e) {
-        console.warn(e);
-        }
-    }
-   
-    async function handleSubmit(e) {
+    async function handleSubmit (e) {
         e.preventDefault();
-        try {
-            const res = await axios('http://localhost:3002/restaurants/' + restaurantId, {
-                method: 'POST',
-                data: qs.stringify(restaurant)
-               
-            });
-            console.log(res);
-            
-            setRestaurant(res.data);
-        } catch(e) {
-        console.warn(e);
-        }
-   
+        console.log(formData);
+        
+         setSuccesfull(false);
+         //if(!isInvalid) {
+           // setDirty (false);
+            let res;
+            try { 
+                const res = await axios ('http://localhost:3002/restaurants',{
+                    method: 'POST',
+                    data: formData,
+                });
+                setRestaurant(res.data);
+                console.log(res);
+                setSuccesfull(true);
+            } catch (e) { 
+                console.log(e.response);
+            }  
+        //}             
     }
+
+   // function validateFormData () {
+       // const inputs= [ 'name', 'adress', 'telephone', 'program', 'specific'];
+      
+        //let isInvalid = false;
+
+       // for(const input of inputs){
+           // if(!formData[input]) {
+                  //newError[input]= errorMessages[input];
+                 // isInvalid = true;
+           // }
+        //}
+         //   return isInvalid;
+   // }
 
     function handleInputChange (e) {
-        setRestaurant( {...restaurant, name: e.currentTarget.value });
-    }
 
-    useEffect(() => { 
-        getRestById(restaurantId);
-    }, [restaurantId]);
+        //setDirty(true);
+        setFormData({ 
+            ...formData,    
+            [e.currentTarget.id]: e.currentTarget.value
+        }); 
+    } 
 
-    if(!restaurant) {
-        return <h1>Loading...</h1>
-    }
-    
     return (
-        <div>
-        <form onSubmit={ handleSubmit } className="wrapper">
-            <h1> Add {restaurant.name} </h1>  
-                <div className="icon">
-                    <label htmlFor="Name">Name</label>
+        <>
+            <form onSubmit={ handleSubmit } className="wrapper">
+                  < h1> Add restaurant</h1>
+                  <label htmlFor="name" >name</label>
                     <input 
-                    onChange= { handleInputChange } 
-                    value ={ restaurant.name } 
-                    type="text" 
-                    className = { 'form-control'  }
-                    id="Name"  
-                    placeholder="Edit name"
+                       onChange= { handleInputChange}  
+                       value ={ formData.name }
+                       type="name" 
+                       id="name" 
+                       placeholder="Name"
                     />
-                </div>
-                <div className="icon">
-                    <label htmlFor="address">Address</label>
+                     <br/>
+                    <label htmlFor="adress" >adress</label>
                     <input 
-                    onChange= { handleInputChange } 
-                    value ={ restaurant.address } 
-                    type="text" 
-                    className = { 'form-control'  }
-                    id="address"  
-                    placeholder="Edit address "
+                       onChange= { handleInputChange}  
+                       value ={ formData.adress }
+                       type="adress" 
+                       id="adress" 
+                       placeholder="Enter adress"
                     />
-                </div>
-                <div className="icon">
-                    <label htmlFor="telephone">Telephone</label>
+                     <br/>
+                    <label htmlFor="telephone" >Telephone</label>
+                    <br/>
+                    <label htmlFor="telephone" >telephone</label>
                     <input 
-                    onChange= { handleInputChange } 
-                    value ={ restaurant.telephone } 
-                    type="text" 
-                    className = { 'form-control'  }
-                    id="telephone"  
-                    placeholder="Edit telephone"
+                       onChange= { handleInputChange}  
+                       value ={ formData.telephone }
+                       type="telephone" 
+                       id="telephone" 
+                       placeholder="Telephone"
                     />
-                </div>
-                <br/>
-                <div className="icon">
-                    <label htmlFor="program">Program</label>
+                     <br/>
+                     <label htmlFor="program" >Program</label>
                     <input 
-                    onChange= { handleInputChange } 
-                    value ={ restaurant.program } 
-                    type="text" 
-                    className = { 'form-control'  }
-                    id="program"  
-                    placeholder="Edit program"
+                       onChange= { handleInputChange}  
+                       value ={ formData.program }
+                       type="program" 
+                       id="program" 
+                       placeholder="program"
                     />
-                </div>
-                <div className="icon">
-                    <label htmlFor="specific">Specific</label>
+                     <br/>
+                     <label htmlFor="specific">Specific</label>
                     <input 
-                    onChange= { handleInputChange } 
-                    value ={ restaurant.specific } 
-                    type="text" 
-                    className = { 'form-control'  }
-                    id="specific"  
-                    placeholder="Edit specific"
-                    />
-                </div>
-                <br/>
-                <button type="submit" className="btn" > Save </button>
-            </form>
-        </div>
-    )
+                       onChange= { handleInputChange}  
+                       value ={ formData.specific }
+                       type="specific" 
+                       id="specific" 
+                       placeholder="specific"
+                    /> 
+                    <br/>
+                 <button type="submit" className="btn" > ADD </button>
+
+          </form>
+        </>
+    );
 }
+
+export default AddRest;
+

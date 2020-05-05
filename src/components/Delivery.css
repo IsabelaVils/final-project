@@ -153,6 +153,7 @@ a:hover {
     border-radius: 5px; 
 }
 
+
 .btn:hover {
     background-color: dodgerblue;
 }
@@ -203,7 +204,13 @@ label {
     color: dodgerblue;
 }
 
+[status= "error"] {
+    color: red;
+}
 
+[status= "succes"] {
+    color: green;
+}
 /*details*/
 
 .detail-wrapper {
@@ -223,6 +230,23 @@ label {
     line-height: 1.45em;
 }
 
+.box {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: ;
+}
+
+.box a {
+    text-decoration: none;
+    text-align: center; 
+    display: flex;
+    color: white; 
+    border-radius: 5px;
+}
+
+.box a:hover {
+    background-color: rgb(1, 5, 8);
+}
 
 .cardImg {   
     margin: 2em 0em 3em 3em;

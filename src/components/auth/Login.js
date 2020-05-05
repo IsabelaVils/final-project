@@ -35,14 +35,14 @@ const { user, setUser } = useContext(AuthContext);
     setGlobalErrorMessage('');
     setSuccesfull(false);
 
-    const isInvalid = await validateFormData();
+    const isInvalid = validateFormData();
 
     if(!isInvalid) {
         setDirty (false);
         try { 
             
             const res = await axios.get ('http://localhost:3002/users?username='
-            + formData.username + '&password=' + formData.password);
+            + formData['username'] + '&password=' + formData['password']);
             if (res.data.lenght) {
                 setUser(res.data.username);
                 localStorage.setItem('user', res.data.username);   
@@ -86,13 +86,28 @@ function handleInputChange (e) {
       [e.currentTarget.id]:'',
   };
 
+  if(e.currentTarget.id === 'password' || e.currentTarget.id === 'retype-password') {
+      newError['different-passwords']= '';
+  }
 
   setFormError(newError);
 } 
     return (
       <form onSubmit={ handleSubmit } className="wrapper">
       < h1> Login </h1>
-            
+            { (globalErrorMessage ?
+                 <div>
+                     Wrong user or password!
+                </div>
+                 :
+                null)
+             }
+
+            { ( isSuccesfull ? 
+                <div> 
+                    You logged in!
+                </div>
+                : null )}
        <br/>
     
       <label htmlFor="username" >User</label>
@@ -101,11 +116,14 @@ function handleInputChange (e) {
            onChange= { handleInputChange } 
            value ={ formData.username } 
            type="text" 
-           
+           className = { 'form-control' + (formError.username ? ' is-invalid' : '' ) }
            id="username"  
            placeholder="Enter username"
         />
-        
+        <i className="fa fa-user" aria-hidden="true"/>
+        <div className ="invalid-feedback">
+           { formError.username }
+        </div>
      </div>
   <br/>
   
@@ -116,17 +134,20 @@ function handleInputChange (e) {
            onChange= { handleInputChange}  
            value ={ formData.password }
            type="password" 
+           className = { 'form-control' + (formError.password ? ' is-invalid' : '' ) }
            id="password" 
            placeholder="Enter password"
         />
-        
-        
+        <i className="fa fa-unlock-alt" aria-hidden="true"/>
+        <div className ="invalid-feedback">
+         { formError.password }
+        </div>
      </div>
   
   <br/>
  
    <br/>
-     <button type="submit" className="btn" > Login </button>
+     <button type="submit" className="btn" disabled = { ! isDirty }> Login </button>
 
 </form>
     )

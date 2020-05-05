@@ -26,7 +26,9 @@ export default function EditRest() {
                 data: qs.stringify(restaurant)
                 //data: qs.stringify({ 'Name': restaurant.name)
             });
-            console.log(res);
+            console.log(res[0]);
+            console.log(res[1]);
+            console.log(res[2]);
             
             setRestaurant(res.data);
         } catch(e) {
@@ -108,7 +110,7 @@ export default function EditRest() {
                     />
                 </div>
                 <br/>
-                <button type="submit" className="btn" > Save </button>
+                <button type="submit" className="btn details" > Save </button>
             </form>
         </div>
     )
