@@ -26,9 +26,7 @@ export default function EditRest() {
                 data: qs.stringify(restaurant)
                 //data: qs.stringify({ 'Name': restaurant.name)
             });
-            console.log(res[0]);
-            console.log(res[1]);
-            console.log(res[2]);
+            console.log(res);
             
             setRestaurant(res.data);
         } catch(e) {

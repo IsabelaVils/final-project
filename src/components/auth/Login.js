@@ -31,7 +31,6 @@ const { user, setUser } = useContext(AuthContext);
 
   async function handleSubmit (e) {
     e.preventDefault();
-
     setGlobalErrorMessage('');
     setSuccesfull(false);
 
@@ -39,13 +38,13 @@ const { user, setUser } = useContext(AuthContext);
 
     if(!isInvalid) {
         setDirty (false);
+        let res;
         try { 
-            
-            const res = await axios.get ('http://localhost:3002/users?username='
-            + formData['username'] + '&password=' + formData['password']);
-            if (res.data.lenght) {
-                setUser(res.data.username);
-                localStorage.setItem('user', res.data.username);   
+            res = await axios.get ('http://localhost:3002/users?username='
+            + formData.username + '&password=' + formData.password);
+            if (res.data.length) {
+                setUser(res.data[0]);
+                localStorage.setItem('user', JSON.stringify(res.data[0]));   
                 console.log(res);
                 setSuccesfull(true);
             } else {
@@ -85,18 +84,13 @@ function handleInputChange (e) {
       ...formError,
       [e.currentTarget.id]:'',
   };
-
-  if(e.currentTarget.id === 'password' || e.currentTarget.id === 'retype-password') {
-      newError['different-passwords']= '';
-  }
-
   setFormError(newError);
 } 
     return (
       <form onSubmit={ handleSubmit } className="wrapper">
       < h1> Login </h1>
             { (globalErrorMessage ?
-                 <div>
+                 <div status= "error">
                      Wrong user or password!
                 </div>
                  :
@@ -104,7 +98,7 @@ function handleInputChange (e) {
              }
 
             { ( isSuccesfull ? 
-                <div> 
+                <div status="succes"> 
                     You logged in!
                 </div>
                 : null )}
@@ -121,7 +115,7 @@ function handleInputChange (e) {
            placeholder="Enter username"
         />
         <i className="fa fa-user" aria-hidden="true"/>
-        <div className ="invalid-feedback">
+        <div className ="invalid-feedback" status= "error">
            { formError.username }
         </div>
      </div>
@@ -139,15 +133,14 @@ function handleInputChange (e) {
            placeholder="Enter password"
         />
         <i className="fa fa-unlock-alt" aria-hidden="true"/>
-        <div className ="invalid-feedback">
+        <div className ="invalid-feedback" status= "error">
          { formError.password }
         </div>
      </div>
   
-  <br/>
- 
-   <br/>
-     <button type="submit" className="btn" disabled = { ! isDirty }> Login </button>
+    <br/>
+    <br/>
+     <button type="submit" className="btn" > Login </button>
 
 </form>
     )

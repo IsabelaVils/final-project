@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Route} from 'react-router-dom';
 
+
 import RestList from './restaurants/RestList';
 import EditRest from './restaurants/EditRest';
 import DeleteRest from './restaurants/DeleteRest';
@@ -12,6 +13,10 @@ import Register from './auth/Register';
 import Login from './auth/Login';
 import AuthContext from './auth/AuthContext';
 import PrivateRoute from './auth/PrivateRoute';
+import Profile from './auth/Profile';
+import UserReviews from './auth/UserReviews';
+
+
 
 
 
@@ -21,7 +26,7 @@ function App() {
   useEffect (() => {
     const user = localStorage.getItem('user');
     if(user) {
-        setUser(user);
+        setUser(JSON.parse(user));
     }
   }, []);
   return(
@@ -29,7 +34,19 @@ function App() {
           <BrowserRouter>
             < Header/>
             <Route exact path="/">
-                <RestList/>
+                <RestList />
+            </Route>
+            <Route exact path="/Pizza">
+              <RestList specific= "Pizza"/>
+            </Route>
+            <Route exact path="/International">
+              <RestList specific= "International"/>
+            </Route>
+            <Route exact path="/Romanian">
+              <RestList specific= "Romanian"/>
+            </Route>
+            <Route path = "/reviews/:reviewId">
+                <UserReviews/>
             </Route>
             <Route exact  path = "/restaurants/:restaurantId">
                 <RestDetails/>
@@ -42,6 +59,9 @@ function App() {
             </PrivateRoute>
             <PrivateRoute path = "/restaurants/add/:restaurantId">
                 <AddRest/>
+            </PrivateRoute>
+            <PrivateRoute path = "/profile">
+                <Profile/>
             </PrivateRoute>
             <PrivateRoute path = "/reviews/add/:reviewId">
                 <AddReview/>

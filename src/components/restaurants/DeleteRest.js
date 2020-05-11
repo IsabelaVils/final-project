@@ -8,6 +8,10 @@ export default function DeleteRest() {
     const { user } = useContext(AuthContext);
     const { restaurantId } = useParams();
     const [ restaurant, setRestaurant] = useState(null);
+
+    useEffect (() => {
+        getRestById();
+      }, []);
     
     async function getRestById (id) {
         try {
@@ -19,21 +23,24 @@ export default function DeleteRest() {
     }
    
     async function handleSubmit(e) {
-        e.preventDefault();
-        try {
-            const res = await axios('http://localhost:3002/restaurants/' + restaurantId, {
-                method: 'DELETE',
-                data: qs.stringify(restaurant)
-               
-            });
-            console.log(res);
+        if ( window.confirm("Are you sore you want to delete?")) {
+            e.preventDefault();
+            try {
+                const res = await axios('http://localhost:3002/restaurants/' + restaurantId, {
+                    method: 'DELETE',
+                    data: qs.stringify(restaurant)
+                
+                })
             
+            console.log(res); 
             setRestaurant(res.data);
+            
         } catch(e) {
         console.warn(e);
         }
    
     }
+}
 
     function handleInputChange (e) {
         setRestaurant( {...restaurant, name: e.currentTarget.value });
@@ -50,7 +57,7 @@ export default function DeleteRest() {
     return (
         <div>
         <form onSubmit={ handleSubmit } className="wrapper">
-            <h1> Add {restaurant.name} </h1>  
+            <h1> Delete {restaurant.name} </h1>  
                 <div className="icon">
                     <label htmlFor="Name">Name</label>
                     <input 
@@ -108,7 +115,7 @@ export default function DeleteRest() {
                     />
                 </div>
                 <br/>
-                <button type="submit" className="btn details" > Delete </button>
+                <button type="submit" className="btn details"  > Delete </button>
             </form>
         </div>
     )

@@ -41,8 +41,8 @@ function RestDetails() {
                 </div>
                 <div className= "info"> 
                     <h3> {restaurant.name} </h3>
-                    <p className="text-detalii"> <span className= "bold">Specific: </span>{restaurant.specific} 
-                    <br/>
+                    <p className="text-detalii"> <span className= "bold">Specific: </span>{restaurant.specific}  </p>
+                   
                     <p className= "bold">Adresa: {restaurant.address} </p>
                         
                             <span className= "bold">Telefon: </span>{restaurant.telephone} 
@@ -55,7 +55,7 @@ function RestDetails() {
                         <br/>
                             <span className= "bold">Reviews:</span>  
                         <br/>
-                    </p>
+                   
                      <div> 
                          { reviews.map(review => <p>{ review.description} </p> )}
                     

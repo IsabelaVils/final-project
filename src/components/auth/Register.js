@@ -49,8 +49,8 @@ function Register () {
             try { 
                 
                 res = await axios.post ('http://localhost:3002/users', formData)
-                setUser(res.data.username);
-                localStorage.setItem('user', res.data.username);   
+                setUser(res.data);
+                localStorage.setItem('user', JSON.stringify(res.data));   
                 console.log(res);
                 setSuccesfull(true);
             } catch (e) { 
@@ -113,7 +113,7 @@ function Register () {
     return (
         <>
             <form onSubmit={ handleSubmit } className="wrapper">
-                  < h1> Register</h1>
+                    <h1> Please Register</h1>
 
                         { (globalErrorMessage ?
                             <div status= "error">

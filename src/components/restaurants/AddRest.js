@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
-import qs from 'qs';
+
 
 //import './register.css';
 import '../Delivery.css';

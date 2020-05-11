@@ -6,7 +6,7 @@
       "address": "Strada Poiana lui Stechil 22, Poiana Brașov",
       "telephone": "0372689800 0749689800",
       "program": "L-D: 10:00-23:00",
-      "specific": "International and Romanian",
+      "specific": "Romanian",
       "website": "https://house-of-dracula.com/",
       "poster2": "./images/international3-01.jpg",
       "poster": "https://www.zilesinopti.ro/media/84489245155648222ead340.92330429.jpg/resize?w=250",
@@ -70,7 +70,7 @@
       "address": "Strada Avram Iancu 24",
       "telephone": "0268470966",
       "program": "L-D: 10:00-22:00",
-      "specific": "International, Meniul Zilei",
+      "specific": "Romanian",
       "website": "http://www.lacasabistriteana.ro/",
       "poster": "https://www.zilesinopti.ro/media/23ffd75fcd4668a08180ff4f0dd94bca.jpg/resize?w=250"
     },
@@ -416,23 +416,38 @@
       "password": "s",
       "retype-password": "s",
       "id": 32
+    },
+    {
+      "username": "eeeee",
+      "password": "e",
+      "retype-password": "e",
+      "id": 33
+    },
+    {
+      "username": "srr",
+      "password": "s",
+      "retype-password": "s",
+      "id": 34
     }
   ],
   "reviews": [
     {
       "id": 1,
       "description": " bla bla bla",
-      "restaurantId": 11111111
+      "restaurantId": 11111111,
+      "userId": 33
     },
     {
       "id": 2,
       "description": " Iar bla bla bla",
-      "restaurantId": 11111111
+      "restaurantId": 11111111,
+      "userId": 29
     },
     {
       "id": 3,
       "description": " Din nou bla bla bla",
-      "restaurantId": 11111111
+      "restaurantId": 11111111,
+      "userId": 29
     },
     {
       "id": 3,
