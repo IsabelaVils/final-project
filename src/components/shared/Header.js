@@ -21,7 +21,6 @@ function Header (props) {
     function handleLogout (e) {
         e.preventDefault();
         setUser(null);
-        
         localStorage.removeItem('user');
         history.push('/');
     }
@@ -64,18 +63,22 @@ function Header (props) {
                 </li>
                 
                 <li className= "box-2"> 
+                    {(user)?
+                    <p className= "headerLink active">Welcome {user.username} </p>
+                    :
+                    null
+                    }
                 </li>
 
                 <li className= "box-7"> 
                     {( user ?
-                    <>
-                        <span>Welcome {user.username} </span>
+                    <>  
                         < a href="/" className= "headerLink active"  onClick={ handleLogout }>Logout</a>
-                        <NavLink exact to="/profile" className= "headerLink " activeClassName= "active"> Profile </NavLink>
+                        
                     </>
                    :
                         <>
-                            <NavLink exact to="/login" className= "headerLink " activeClassName= "active"> Login </NavLink>
+                            <NavLink exact to="/login" className= "headerLink " activeClassName= "active" > Login </NavLink>
                             <NavLink exact to="/register" className= "headerLink" activeClassName= "active"> Register </NavLink>
                         </>
                     )}

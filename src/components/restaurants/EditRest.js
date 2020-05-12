@@ -19,20 +19,21 @@ export default function EditRest() {
     }
    
     async function handleSubmit(e) {
-        e.preventDefault();
-        try {
-            const res = await axios('http://localhost:3002/restaurants/' + restaurantId, {
-                method: 'PUT',
-                data: qs.stringify(restaurant)
-                //data: qs.stringify({ 'Name': restaurant.name)
-            });
-            console.log(res);
-            
-            setRestaurant(res.data);
-        } catch(e) {
-        console.warn(e);
+        if ( window.confirm("Are you sore you want to edit?")) {
+            e.preventDefault();
+            try {
+                const res = await axios('http://localhost:3002/restaurants/' + restaurantId, {
+                    method: 'PUT',
+                    data: qs.stringify(restaurant)
+                    //data: qs.stringify({ 'Name': restaurant.name)
+                });
+                console.log(res);
+                
+                setRestaurant(res.data);
+            } catch(e) {
+            console.warn(e);
+            }
         }
-   
     }
 
     function handleInputChange (e) {

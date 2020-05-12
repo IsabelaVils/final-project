@@ -28,28 +28,18 @@ body{
     height: auto;
 }
 
-
-
 .box-2 {
     flex:1; 
-   
-   
+    align-self: center;
+    padding-left: 4em; 
+    padding-right: 0em;  
 }
-
 
 .box-3 {
     flex:1; 
-    align-self: center;
-    
-   
-   
-    padding-left: 4em; 
+    align-self: center; padding-left: 4em; 
     padding-right: 0em;   
      
-}
-.box-3 li {
-    background-color: #555;
-    opacity: .8;
 }
 
 .box-5 {
@@ -62,8 +52,7 @@ body{
     border-left-color: #555;
     border-bottom-color: #555;
     padding-left: 4em; 
-    padding-right: 0em;   
-     
+    padding-right: 0em;      
 }
 
 .box-7 {

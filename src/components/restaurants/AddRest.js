@@ -1,5 +1,7 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
+
 
 
 //import './register.css';
@@ -18,15 +20,18 @@ function AddRest () {
     const [isSuccesfull, setSuccesfull] = useState(false);
     const [ restaurant, setRestaurant] = useState('');
     const { user, setUser } = useContext(AuthContext);
+    const history = useHistory();
+
     
     async function handleSubmit (e) {
         e.preventDefault();
         console.log(formData);
-        
+        history.push('/');
          setSuccesfull(false);
          //if(!isInvalid) {
            // setDirty (false);
             let res;
+            if ( window.confirm("Are you sore you want to add?")) {
             try { 
                 const res = await axios ('http://localhost:3002/restaurants',{
                     method: 'POST',
@@ -38,7 +43,7 @@ function AddRest () {
             } catch (e) { 
                 console.log(e.response);
             }  
-        //}             
+          }  //}             
     }
 
    // function validateFormData () {

@@ -50,14 +50,14 @@ function RestDetails() {
                         <span className= "bold">Program: </span>{restaurant.program} 
                         <br/>
                             <span className= "bold">Website:</span> {restaurant.website} 
-                        <br/>
+                        { /*<br/>
                             <span className= "bold">Special offer:</span> {restaurant.offer}
                         <br/>
                             <span className= "bold">Reviews:</span>  
                         <br/>
                    
                      <div> 
-                         { reviews.map(review => <p>{ review.description} </p> )}
+                        {  reviews.map(review => <p>{ review.description} </p> )
                     
                      </div>  
                      <p>
@@ -65,8 +65,8 @@ function RestDetails() {
                                 < Link to= { "/reviews/add/" + reviews.id }className="btn" > Add Review </Link>
                                 : 
                                  null
-                            }
-                        </p>
+                            } 
+                        </p>*/}
                      <div className="box">
                          <p>
                             {   user ?

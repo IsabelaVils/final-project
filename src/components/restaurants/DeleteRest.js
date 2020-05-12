@@ -2,12 +2,16 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import qs from 'qs';
+import { useHistory } from 'react-router-dom';
+
 import AuthContext from '../auth/AuthContext';
 
 export default function DeleteRest() {
     const { user } = useContext(AuthContext);
     const { restaurantId } = useParams();
     const [ restaurant, setRestaurant] = useState(null);
+    const history = useHistory();
+
 
     useEffect (() => {
         getRestById();
@@ -34,6 +38,7 @@ export default function DeleteRest() {
             
             console.log(res); 
             setRestaurant(res.data);
+            history.push('/');
             
         } catch(e) {
         console.warn(e);
@@ -111,7 +116,7 @@ export default function DeleteRest() {
                     type="text" 
                     className = { 'form-control'  }
                     id="specific"  
-                    placeholder="Edit specific"
+                    placeholder="Delete specific"
                     />
                 </div>
                 <br/>

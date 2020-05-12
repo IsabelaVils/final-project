@@ -6,8 +6,27 @@ import UserReviews from './UserReviews';
 import AuthContext from './AuthContext';
 
 function Profile () {
-    const { user, setUser } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
+    const {reviewId } = useParams();
+    const [ reviews, setReviews ] = useState('');
+ 
 
+    
+    async function getReviewByUser (id) {
+        try {
+            const promises = [];
+            promises.push(axios('http://localhost:3002/users/' + id).then (res => res.data));
+            promises.push(axios ('http://localhost:3002/reviews?userId=' + id).then (res => res.data));
+
+            const [ user, reviews ]= await Promise.all(promises);
+          
+            setReviews(reviews);
+            console.log(reviews, user);
+            
+        } catch(e) {
+        console.warn(e);
+        }
+    }
     if(user){
     return(
         <div>

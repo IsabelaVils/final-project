@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 import AuthContext from './AuthContext';
 
@@ -21,6 +22,7 @@ const [formError, setFormError] = useState({
     'username' : '',
     'password' : ''
 });
+const history = useHistory();
 
 const [isSuccesfull, setSuccesfull] = useState(false);
 const [ isDirty, setDirty] = useState (false);
@@ -33,6 +35,7 @@ const { user, setUser } = useContext(AuthContext);
     e.preventDefault();
     setGlobalErrorMessage('');
     setSuccesfull(false);
+    
 
     const isInvalid = validateFormData();
 
@@ -47,6 +50,7 @@ const { user, setUser } = useContext(AuthContext);
                 localStorage.setItem('user', JSON.stringify(res.data[0]));   
                 console.log(res);
                 setSuccesfull(true);
+                history.push('/');
             } else {
               setGlobalErrorMessage('Wrong user or password!');
             }

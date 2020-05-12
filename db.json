@@ -14,7 +14,7 @@
     },
     {
       "id": 2,
-      "name": "Blink Pizza 2",
+      "name": "Blink Pizza ",
       "address": "Strada Ceferiștilor 69",
       "telephone": "0368 408 050 0720 797 301",
       "program": "L-D: 10:00-23:00",
@@ -105,195 +105,16 @@
       "poster": "https://www.zilesinopti.ro/media/bb1a9bd96d89e6a24373df941fae2674.jpg/resize?w=250"
     },
     {
-      "id": 45,
-      "name": "Nou"
-    },
-    {
-      "name": "Test",
-      "address": "test",
-      "id": 11111112
-    },
-    {
-      "name": "Test",
-      "address": "test",
-      "id": 11111113
-    },
-    {
       "name": "Test",
       "address": "test",
       "id": 11111114
     },
     {
-      "Name": "TEST",
+      "name": "test",
+      "adress": "test",
+      "telephone": "000",
+      "program": "0",
       "id": 11111115
-    },
-    {
-      "Name": "Local nou",
-      "id": 11111116
-    },
-    {
-      "Offer": "Meniul zilei",
-      "id": 11111117
-    },
-    {
-      "Offer": "Meniul zilei",
-      "id": 11111118
-    },
-    {
-      "offer": "333",
-      "telephone": "333",
-      "id": 11111119
-    },
-    {
-      "offer": "oferta",
-      "telephone": "",
-      "id": 11111120
-    },
-    {
-      "offer": "oferta",
-      "telephone": "",
-      "id": 11111121
-    },
-    {
-      "offer": "oferta",
-      "telephone": "",
-      "id": 11111122
-    },
-    {
-      "offer": "oferta",
-      "telephone": "333",
-      "id": 11111123
-    },
-    {
-      "offer": "oferta",
-      "telephone": "333",
-      "id": 11111124
-    },
-    {
-      "offer": "oferta",
-      "telephone": "333",
-      "id": 11111125
-    },
-    {
-      "offer": "oferta",
-      "telephone": "333",
-      "id": 11111126
-    },
-    {
-      "Name": "Resturant nou",
-      "Adress": "noua",
-      "telephone": "noua",
-      "id": 11111128
-    },
-    {
-      "name": "",
-      "address": "",
-      "telephone": "SSSSS",
-      "program": "",
-      "specific": "",
-      "Name": "S",
-      "Adress": "SSS",
-      "id": 11111129
-    },
-    {
-      "name": "",
-      "adress": "s",
-      "telephone": "s",
-      "program": "",
-      "username": "rr",
-      "id": 11111130
-    },
-    {
-      "name": "",
-      "adress": "rr",
-      "telephone": "rr",
-      "program": "",
-      "username": "rr",
-      "id": 11111131
-    },
-    {
-      "name": "",
-      "adress": "rr",
-      "telephone": "rr",
-      "program": "",
-      "username": "rr",
-      "id": 11111132
-    },
-    {
-      "name": "",
-      "adress": "rrr",
-      "telephone": "rrr",
-      "program": "",
-      "username": "r",
-      "id": 11111133
-    },
-    {
-      "name": "",
-      "adress": "rrrr",
-      "telephone": "rrr",
-      "program": "",
-      "username": "r",
-      "id": 11111134
-    },
-    {
-      "username": "eusuntiar",
-      "password": "ee",
-      "retype-password": "ee",
-      "id": 11111135
-    },
-    {
-      "name": "",
-      "adress": "111",
-      "telephone": "111",
-      "program": "",
-      "username": "1",
-      "id": 11111136
-    },
-    {
-      "name": "",
-      "adress": "ddd",
-      "telephone": "dd",
-      "program": "",
-      "username": "d",
-      "id": 11111137
-    },
-    {
-      "name": "",
-      "adress": "ALT",
-      "telephone": "ALT",
-      "program": "",
-      "username": "T",
-      "id": 11111138
-    },
-    {
-      "name": "",
-      "adress": "s",
-      "telephone": "111",
-      "program": "",
-      "username": "rr",
-      "id": 11111140
-    },
-    {
-      "name": "",
-      "adress": "ddd",
-      "telephone": "dd",
-      "program": "",
-      "id": 11111141
-    },
-    {
-      "name": "RESTA",
-      "adress": "NOU",
-      "telephone": "1",
-      "program": "1",
-      "specific": "1",
-      "id": 11111142
-    },
-    {
-      "name": "RESTAURANT",
-      "adress": "",
-      "telephone": "",
-      "program": "",
-      "id": 11111143
     }
   ],
   "users": [
@@ -428,6 +249,42 @@
       "password": "s",
       "retype-password": "s",
       "id": 34
+    },
+    {
+      "username": "ertttt",
+      "password": "t",
+      "retype-password": "t",
+      "id": 35
+    },
+    {
+      "username": "000",
+      "password": "0",
+      "retype-password": "0",
+      "id": 36
+    },
+    {
+      "username": "0ipiopiop",
+      "password": "0",
+      "retype-password": "0",
+      "id": 37
+    },
+    {
+      "username": "0900",
+      "password": "0",
+      "retype-password": "0",
+      "id": 38
+    },
+    {
+      "username": "rttt",
+      "password": "t",
+      "retype-password": "t",
+      "id": 39
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "retype-password": "test",
+      "id": 40
     }
   ],
   "reviews": [
@@ -458,6 +315,73 @@
       "id": 3,
       "description": " Bla bla bla",
       "restaurantId": 2
+    },
+    {
+      "description": "sss",
+      "userId": 27,
+      "id": 4
+    },
+    {
+      "description": "cc",
+      "userId": 27,
+      "id": 5
+    },
+    {
+      "description": "",
+      "userId": 27,
+      "id": 6
+    },
+    {
+      "description": "kk",
+      "userId": 27,
+      "id": 7
+    },
+    {
+      "description": "OARE",
+      "userId": 27,
+      "id": 8
+    },
+    {
+      "description": "descr",
+      "userId": 27,
+      "restaurantId": null,
+      "id": 9
+    },
+    {
+      "description": "descr",
+      "userId": 27,
+      "restaurantId": null,
+      "id": 10
+    },
+    {
+      "description": "descr",
+      "userId": 27,
+      "restaurantId": null,
+      "id": 11
+    },
+    {
+      "description": "descr",
+      "userId": 27,
+      "restaurantId": null,
+      "id": 12
+    },
+    {
+      "description": "fgfgf",
+      "userId": 27,
+      "restId": null,
+      "id": 13
+    },
+    {
+      "description": "",
+      "userId": 27,
+      "restId": null,
+      "id": 14
+    },
+    {
+      "description": "",
+      "userId": 27,
+      "restId": null,
+      "id": 15
     }
   ]
 }

@@ -1,7 +1,9 @@
 
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext,  } from 'react';
 import axios from 'axios';
 import qs from 'qs';
+import { useHistory } from 'react-router-dom';
+
 
 //import './register.css';
 import '../Delivery.css';
@@ -28,6 +30,9 @@ function Register () {
         'different-passwords':''
     });
 
+    
+    const history = useHistory();
+
     const [isSuccesfull, setSuccesfull] = useState(false);
     const [ isDirty, setDirty] = useState (false);
 
@@ -40,6 +45,7 @@ function Register () {
         e.preventDefault();
         setGlobalErrorMessage('');
         setSuccesfull(false);
+       
 
         const isInvalid = validateFormData() || await checkUser();
 
@@ -53,6 +59,7 @@ function Register () {
                 localStorage.setItem('user', JSON.stringify(res.data));   
                 console.log(res);
                 setSuccesfull(true);
+                history.push('/');
             } catch (e) { 
                 console.log(e.response);
             }  

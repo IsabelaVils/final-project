@@ -9,6 +9,9 @@ import '../Delivery.css';
 function RestList ( { specific }) {
     
     let [restaurants, setRestaurants] = useState ([]);
+   
+
+    
 
     useEffect (() => {
       getRestaurants();
@@ -21,6 +24,8 @@ function RestList ( { specific }) {
   
     // }
 
+    
+
     async function getRestaurants() {
       let res;
       if(specific){
@@ -29,10 +34,11 @@ function RestList ( { specific }) {
         res = await axios('http://localhost:3002/restaurants');
       }
       setRestaurants(res.data);
+
+       
     }
     return (
       <div className= "container">
-        
          { restaurants.length ? 
              restaurants.map(restaurant => <RestCard local = { restaurant } key = { restaurant.id } />)
                 : "Loading..."}
